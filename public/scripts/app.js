@@ -113,34 +113,32 @@ $(function() {
   $tweetForm.on("submit", function(event) {
     event.preventDefault();
     const $tweetText = $('#new-text');
-    const $form = $
-    
+    console.log($tweetText)
 
     $.ajax({
       url: '/tweets',
       type: 'POST',
       data: $tweetText.serialize(),
       success: function () {
-        $('#article').append(createTextElement(this.data))
+
+        let actualText = this.data.substring(5, this.data.length)
+        $('#article').append(createTextElement(actualText))
       },
       error: function () {
           alert("error at POST");
       }
     });
-    $.ajax({
-      url: '/',
-      type: 'GET',
-      data: $tweetText.serialize(),
-      success: function () {
-      },
-      error: function () {
-        alert("error at GET")
-      }  
-    }); 
-    // $.ajax('/', { method: 'POST' })
-    // .then(function (tweet) {
-    //   createTweetElement(tweet)
-    //   $button.replaceWith(morePostsHtml);
+    // $.ajax({
+    //   url: '/',
+    //   type: 'GET',
+    //   data: $tweetText.serialize(),
+    //   success: function () {
+    //     renderTweets()
+    //   },
+    //   error: function () {
+    //     alert("error at GET")
+    //   }  
+    // }); 
 
   });
 });
