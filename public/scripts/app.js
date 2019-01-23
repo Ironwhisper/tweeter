@@ -65,6 +65,22 @@ const data = [
   }
 ];
 
+function createTextElement(text) {
+  return `<article class="tweet-article">
+  <img class="logo" src="../images/smiley01.svg">
+  <header>
+    USERNAME
+      <span class="at">@user</span>
+  </header>
+  <p> 
+  ${text}
+  </p>
+  <footer>
+    Created at: NOW
+  </footer>
+</article>`
+}
+
 function createTweetElement(tweet) {
   return `<article class="tweet-article">
   <img class="logo" src="${tweet.user.avatars.small}">
@@ -87,22 +103,48 @@ function renderTweets(tweets) {
   tweets.forEach(tweetX => $('#article').append(createTweetElement(tweetX)))
 }
 
-$(function() {
-  renderTweets(data);
-});
+
 
 $(function() {
   
-  const $tweetButton = $('#tweet-button');
+  const $tweetForm = $('#form-01');
+  const $tweetText = $('#new-text');
 
-  $tweetButton.on("submit", function(event) {
-    event.preventDefault;
-    console.log($(this).serialize())
-    // $.ajax('', {method: 'POST'})
-    $.ajax('/tweets/', { method: 'POST' })
-    .then(function (morePostsHtml) {
-      console.log('Success: ', morePostsHtml);
-      $button.replaceWith(morePostsHtml);
+  $tweetForm.on("submit", function(event) {
+    event.preventDefault();
+    const $tweetText = $('#new-text');
+    const $form = $
+    
+
+    $.ajax({
+      url: '/tweets',
+      type: 'POST',
+      data: $tweetText.serialize(),
+      success: function () {
+        $('#article').append(createTextElement(this.data))
+      },
+      error: function () {
+          alert("error at POST");
+      }
+    });
+    $.ajax({
+      url: '/',
+      type: 'GET',
+      data: $tweetText.serialize(),
+      success: function () {
+      },
+      error: function () {
+        alert("error at GET")
+      }  
+    }); 
+    // $.ajax('/', { method: 'POST' })
+    // .then(function (tweet) {
+    //   createTweetElement(tweet)
+    //   $button.replaceWith(morePostsHtml);
 
   });
+});
+
+$(function() {
+  renderTweets(data);
 });
