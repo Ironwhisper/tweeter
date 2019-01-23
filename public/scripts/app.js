@@ -39,17 +39,34 @@ function renderTweets(tweets) {
   tweets.forEach(tweetX => $('#article').append(createTweetElement(tweetX)))
 }
 
-
+function tweetValid(newTweet) {
+  let arr = [];
+  if (newTweet.length === 0){
+    arr.push("You can't submit nothin'!");
+    arr.push(false);
+  }
+  else if (newTweet.length > 140) {
+    arr.push("You are over your character limit! Delete half yo crap!");
+    arr.push(false);
+  }  
+  return arr;
+}
 
 $(function() {
   
   const $tweetForm = $('#form-01');
   const $tweetText = $('#new-text');
 
+
   $tweetForm.on("submit", function(event) {
     event.preventDefault();
-    const $tweetText = $('#new-text');
-
+    
+    let tV = tweetValid($tweetText.val());
+    if (tV[1] === false) {
+      alert(tV[0]);
+      return;
+    }
+    
     $.ajax({
       url: '/tweets',
       type: 'POST',
