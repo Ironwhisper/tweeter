@@ -44,11 +44,11 @@
   
 }
 
-#tweet-article :hover {
+.tweet-article :hover {
   opacity: 1;
 }
 
-#tweet-article .logo {
+.tweet-article .logo {
   opacity: 0.5;
   margin-top:2%;
   margin-bottom: auto;
@@ -58,7 +58,7 @@
   height: auto;
 }
 
-#tweet-article header {
+.tweet-article header {
   opacity: 0.7;
   background-color: #eee;
   line-height: 3rem;
@@ -68,19 +68,20 @@
 }
 
 
-#tweet-article .at {
+.tweet-article .at {
   opacity: 0.5;
   line-height: 4em;
   margin-top:auto;
   margin-bottom: auto;
   font-size: 70%;
   color: gray;
+  margin-right: 2%;
   float: right;
   background: inherit;
 
 }
 
-#tweet-article p {
+.tweet-article p {
   color: gray;
   background-color: white;
   border-bottom: 1px solid #eee;
@@ -92,13 +93,12 @@
   padding-left: 5%;
 }
 
-#tweet-article footer {
+.tweet-article footer {
   color: gray;
   font-size:70%;
   background-color: white;
   line-height: 3rem;
   margin-top: auto;
-  margin-bottom: auto;
   padding-left: 5%;
 }
 
