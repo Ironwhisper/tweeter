@@ -1,0 +1,36 @@
+
+
+#compose-title {
+  margin-left: 2.5%;
+  margin-right:2.5%;
+  border-bottom: 1px solid black;
+
+}
+
+.sub-container {
+  border-radius: 5px;
+  background: #eee;
+  border: 1px solid #ccc;
+  margin: 2em;
+}
+
+
+#new-text {
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    padding: 5px;
+    width: 95%;
+}
+
+.counter {
+    font-style: italic;
+    margin-right: 2.5%;
+    margin-left: 71%;
+    color: gray;  
+  }
+
+#tweet-button {
+      margin-left: 2.5%;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
