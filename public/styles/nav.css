@@ -1,4 +1,5 @@
 #nav-bar {
+  z-index: 1;
   position: fixed;
   top: 0;
   height: 80px;
@@ -19,6 +20,7 @@
 }
 
  #nav-bar .header {
+  z-index: 1;
   float: left;
   font-size: 2em;
   margin-top: auto;
