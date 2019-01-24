@@ -12,14 +12,14 @@
   padding-bottom: 0;
 }
 
- #nav-bar .logo {
+#nav-bar .logo {
   margin-right: 10px;
   width: 80px;
   height: 80px;
   float: left;
 }
 
- #nav-bar .header {
+#nav-bar .header {
   z-index: 1;
   float: left;
   font-size: 2em;
@@ -33,11 +33,12 @@
 #nav-bar .compose {
   float: right;
   font-size: 1.5em;
-  line-height: 2em;  
+  line-height: 2em;
   margin-top: 1.5%;
   top: 0px;
   bottom: 0px;
 }
+
 #nav-bar .compose:hover {
   background-color: aquamarine;
 }

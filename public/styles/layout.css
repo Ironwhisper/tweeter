@@ -1,29 +1,20 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
  html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
   box-sizing: inherit;
-
 }
 
-
-/*
- * Global layout stuff
- */
-
- body {
+/* Global layout */
+body {
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
   color: #244751;
   background-color: #eee;
 }
+
 .main {
-  margin-top: 30px; /* Add a top margin to avoid content overlay */
+  margin-top: 30px;
 }
 
 .container {
@@ -41,7 +32,6 @@
   background: #eee;
   border: 1px solid #ccc;
   margin: 2em;
-  
 }
 
 .tweet-article :hover {
@@ -61,12 +51,11 @@
 .tweet-article header {
   opacity: 0.7;
   background-color: #eee);
-  line-height: 3rem;
-  padding-left: 3em;
-  margin-top: auto;
-  color: rgb(22, 22, 22);
+ line-height: 3rem;
+ padding-left: 3em;
+ margin-top: auto;
+ color: rgb(22, 22, 22);
 }
-
 
 .tweet-article .at {
   opacity: 0.5;
@@ -107,7 +96,3 @@
   margin-left: 2.5%;
   margin-bottom: 2.5%;
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
