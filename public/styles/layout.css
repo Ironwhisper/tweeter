@@ -60,11 +60,11 @@
 
 .tweet-article header {
   opacity: 0.7;
-  background-color: #eee;
+  background-color: #eee);
   line-height: 3rem;
   padding-left: 3em;
   margin-top: auto;
-  color: gray;
+  color: rgb(22, 22, 22);
 }
 
 
@@ -74,7 +74,7 @@
   margin-top:auto;
   margin-bottom: auto;
   font-size: 70%;
-  color: gray;
+  color: rgb(29, 29, 29);
   margin-right: 2%;
   float: right;
   background: inherit;
@@ -82,7 +82,7 @@
 }
 
 .tweet-article p {
-  color: gray;
+  color: rgb(37, 35, 35);
   background-color: white;
   border-bottom: 1px solid #eee;
   line-height: 1.5rem;
@@ -94,7 +94,7 @@
 }
 
 .tweet-article footer {
-  color: gray;
+  color: rgb(75, 72, 72);
   font-size:70%;
   background-color: white;
   line-height: 3rem;

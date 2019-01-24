@@ -61,7 +61,7 @@ $(function() {
 
   //compose new tweet slide functionality
   $("#nav-bar .compose").click(function(){
-    $("#tweet-input").slideToggle("slow")
+    $("#tweet-input").slideToggle("slow");
     $('#new-text').focus();
   });
 
@@ -76,11 +76,13 @@ $(function() {
     event.preventDefault();
     //erase previous error message, if any
     $('#error').empty();
+    $('#error').hide();
+
 
     //implementing check error function
     let tV = tweetValid($tweetText.val());
     if (tV[1] === false) {
-      $('#error').slideDown('slow')
+      $('#error').slideDown('medium');
       errorHandler(tV[0]);
       return;
     }
