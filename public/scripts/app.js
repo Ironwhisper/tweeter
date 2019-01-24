@@ -109,7 +109,7 @@ $(function() {
       success: function (data) {
         renderTweets(data.reverse())
       },
-        error:  errorHandler(error)
+      error:  errorHandler(error)
     });
   }
   loadTweets();
