@@ -16,6 +16,11 @@ window.onbeforeunload = function() {
   }
 };
 
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
 function createTweetElement(tweet) {
   return `<article class="tweet-article">
@@ -25,7 +30,7 @@ function createTweetElement(tweet) {
       <span class="at">${tweet.user.handle}</span>
   </header>
   <p> 
-  ${tweet.content.text}
+  ${escape(tweet.content.text)} 
   </p>
   <footer>
     Created at: ${tweet.created_at}
@@ -51,12 +56,16 @@ function tweetValid(newTweet) {
   }  
   return arr;
 }
-
+///////////////////////////////////////////////////////////////////////////////////////////
 $(function() {
+
+  $("#nav-bar .compose").click(function(){
+    $("#tweet-input").slideToggle("slow")
+    $('#new-text').focus();
+  });
   
   const $tweetForm = $('#form-01');
   const $tweetText = $('#new-text');
-
 
   $tweetForm.on("submit", function(event) {
     event.preventDefault();
@@ -66,7 +75,7 @@ $(function() {
       alert(tV[0]);
       return;
     }
-    
+
     $.ajax({
       url: '/tweets',
       type: 'POST',
@@ -82,12 +91,14 @@ $(function() {
   });
 
   function loadTweets() {
+
+
     $.ajax({
       url: "/tweets",
       type: 'GET',
       dataType: 'json',
       success: function (data) {
-        renderTweets(data)
+        renderTweets(data.reverse())
       },
         error: function() {
         alert(error);

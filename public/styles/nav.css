@@ -29,3 +29,15 @@
   top: 0px;
   bottom: 0px;
 }
+
+#nav-bar .compose {
+  float: right;
+  font-size: 1.5em;
+  line-height: 2em;  
+  margin-top: 1.5%;
+  top: 0px;
+  bottom: 0px;
+}
+#nav-bar .compose:hover {
+  background-color: aquamarine;
+}
