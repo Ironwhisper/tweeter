@@ -7,9 +7,9 @@ module.exports = function makeDataHelpers(db) {
   return {
 
     // Saves a tweet to `db` in Mongo
-    saveTweet: function(newTweet) {
-
-        db.collection("tweets").insertOne(newTweet);
+    saveTweet: function(newTweet, callback) {
+          db.collection("tweets").insertOne(newTweet);
+          callback();
     },
 
     // Get all tweets in `db`, from Mongo

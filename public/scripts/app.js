@@ -93,7 +93,9 @@ $(function() {
       type: 'POST',
       data: $tweetText.serialize(),
       success: function () {
+        console.log("success")
         $('#article').empty();
+        document.getElementById("new-text").value = "";
         loadTweets();
       },
       error: errorHandler(error)
