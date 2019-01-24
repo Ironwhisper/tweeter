@@ -3,17 +3,15 @@ window.onbeforeunload = function() {
   if (textarea.value != textarea.defaultValue) {
     return 'Do you want to leave the page and discard changes?';
   }
-};/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+};
+
 //to prevent the insertion of malicious code into the form element
 function escape(str) {
   var div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
+
 //create a new tweet and factor it into existing html structure
 function createTweetElement(tweet) {
   return `<article class="tweet-article">
@@ -36,6 +34,7 @@ function createTweetElement(tweet) {
 function renderTweets(tweets) {
   tweets.forEach(tweetX => $('#article').append(createTweetElement(tweetX)))
 }
+
 //checks if the entered tweet is valid, that is not null and not over character limit
 function tweetValid(newTweet) {
   let arr = [];
@@ -53,28 +52,35 @@ function tweetValid(newTweet) {
 
 //document load function
 $(function() {
+
   //prints out the error at the foot of the new tweet form
   function errorHandler(error) {
   $('#error').append(error);
+
   }
+
   //compose new tweet slide functionality
   $("#nav-bar .compose").click(function(){
     $("#tweet-input").slideToggle("slow")
     $('#new-text').focus();
   });
+
   //setting jquery'd stuff to variables for ease of use 
   const $tweetForm = $('#form-01');
   const $tweetText = $('#new-text');
 
   //new tweet submission and appending functionality
   $tweetForm.on("submit", function(event) {
+
     //stop from refreshing the page as per default browser spec
     event.preventDefault();
     //erase previous error message, if any
     $('#error').empty();
+
     //implementing check error function
     let tV = tweetValid($tweetText.val());
     if (tV[1] === false) {
+      $('#error').slideDown('slow')
       errorHandler(tV[0]);
       return;
     }
