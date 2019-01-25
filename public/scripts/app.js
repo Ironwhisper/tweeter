@@ -67,20 +67,15 @@ $(function() {
   const $tweetForm = $('#form-01');
   const $tweetText = $('#new-text');
   // Like button functionality
-  // let likeStatus = 0;
-
-
   $(document).on('click','#like', function(){
     let liked = document.getElementById('like');
     if (liked.getAttribute('data-like') === '0') {
       $(this).css('opacity','0.7');
       liked.setAttribute('data-like','1');
-      // likeStatus = 1;
     } 
     else {
       $(this).removeAttr('style');
       liked.setAttribute('data-like','0');
-      // likeStatus = 0;
     }
   });
   // New tweet submission and appending functionality
