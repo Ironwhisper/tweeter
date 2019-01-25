@@ -37,3 +37,11 @@ Also a big thanks to all the mentors who patiently helped me get through the mud
 - Chance 
 - Md5
 - MongoDb version 3 and greater
+
+## Screenshots
+
+Here are some screens from actual app!
+
+!["Write down your message!"](https://github.com/Ironwhisper/tweeter/tree/master/Screenshots/Compose.png)
+!["See what others wrote!"](https://github.com/Ironwhisper/tweeter/tree/master/Screenshots/Tweets.png)
+!["Like what you like!"](https://github.com/Ironwhisper/tweeter/tree/master/Screenshots/Like.png)
