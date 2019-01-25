@@ -27,16 +27,23 @@ body {
   padding: 20px;
 }
 
-.sub-container {
+.tweet-article {
   border-radius: 5px;
   background: #eee;
+  margin: 1em;
   border: 1px solid #ccc;
-  margin: 2em;
+  overflow:hidden;
 }
 
-#article:hover {
+.tweet-article:hover {
   border: 1px solid black;
   border-radius: 5px;
+  opacity: 1;
+  overflow:hidden;
+}
+
+.tweet-article:hover header, .tweet-article:hover #like {
+  opacity: 1;
 }
 
 .tweet-article .logo {
@@ -56,11 +63,6 @@ body {
   padding-left: 3em;
   margin-top: auto;
   color: rgb(22, 22, 22);
-}
-
-.tweet-article header:hover {
-  opacity: 1;
-  box-sizing: border-box;
 }
 
 .tweet-article .at {
@@ -94,6 +96,17 @@ body {
   line-height: 3rem;
   margin-top: auto;
   padding-left: 5%;
+}
+
+#like {
+  opacity: 0;
+  width: 7%;
+  height: auto;
+  float: right;
+  margin-top: 4%;
+  margin-right: 3%;
+  border: none;
+  outline: none;
 }
 
 #error {

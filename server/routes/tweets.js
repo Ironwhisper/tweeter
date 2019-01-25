@@ -32,7 +32,7 @@ module.exports = function(DataHelpers) {
         text: req.body.text
       },
       created_at: Date.now()
-    };
+     };
 
     // Save tweet path routing
     DataHelpers.saveTweet(tweet, (err) => {

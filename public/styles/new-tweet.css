@@ -4,10 +4,13 @@
   border-bottom: 1px solid black;
 }
 
+#tweet-input {
+  border: 1px solid #ccc;
+}
+
 .sub-container {
   border-radius: 5px;
   background: #eee;
-  border: 1px solid #ccc;
   margin: 2em;
 }
 
@@ -23,7 +26,7 @@
     margin-right: 2.5%;
     margin-left: 71%;
     color: gray;
-  }
+}
 
 #tweet-button {
     margin-left: 2.5%;

@@ -9,7 +9,6 @@ module.exports = function makeDataHelpers(db) {
           db.collection("tweets").insertOne(newTweet);
           callback();
     },
-
     // Get all tweets from Mongo database
     getTweets: function(callback) {
       db.collection("tweets").find().toArray(callback);

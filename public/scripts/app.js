@@ -25,6 +25,7 @@ function createTweetElement(tweet) {
   </p>
   <footer>
   Created at: ${tweet.created_at}
+  <input id="like" type="image" src="../images/like.jpg">
   </footer>
   </article>`
 }
@@ -62,14 +63,24 @@ $(function() {
     $("#tweet-input").slideToggle("slow");
     $('#new-text').focus();
   });
-
   // Setting jquery'd stuff to variables for ease of use
   const $tweetForm = $('#form-01');
   const $tweetText = $('#new-text');
-
+  // Like button functionality
+  let likeStatus = 0;
+  $(document).on('click','#like', function(){
+    if (likeStatus === 0) {
+      alert('Liked!');
+      $(this).css('opacity','0.7');
+      likeStatus = 1;
+    } 
+    else {
+      $(this).removeAttr('style');
+      likeStatus = 0;
+    }
+  });
   // New tweet submission and appending functionality
   $tweetForm.on("submit", function(event) {
-
     // Stop from refreshing the page as per default browser spec
     event.preventDefault();
     // Erase previous error message, if any
@@ -77,12 +88,11 @@ $(function() {
     // Turns out it's necessary to call hide funciton in order for slide to work
     $('#error').hide();
 
-
     // Implementing check error function
     let tV = tweetValid($tweetText.val());
     if (tV[1] === false) {
-      $('#error').slideDown('medium');
       errorHandler(tV[0]);
+      $('#error').slideDown('slow');
       return;
     }
 
