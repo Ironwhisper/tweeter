@@ -28,7 +28,6 @@ function createTweetElement(tweet) {
   </footer>
   </article>`
 }
-
 // Loops through tweets, calls createTweetElement for each tweet, then
 // takes return value and appends it to the tweets container
 function renderTweets(tweets) {
@@ -56,7 +55,8 @@ $(function() {
   function errorHandler(error) {
     $('#error').append(error);
   }
-
+  // Hiding the new tweet section upon loading page
+  $("#tweet-input").hide();
   // Compose new tweet slide up and down functionality
   $("#nav-bar .compose").click(function(){
     $("#tweet-input").slideToggle("slow");
@@ -92,7 +92,6 @@ $(function() {
       type: 'POST',
       data: $tweetText.serialize(),
       success: function () {
-        console.log("success");
         $('#article').empty();
         document.getElementById("new-text").value = "";
         loadTweets();
