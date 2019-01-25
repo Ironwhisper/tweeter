@@ -25,7 +25,7 @@ function createTweetElement(tweet) {
   </p>
   <footer>
   Created at: ${tweet.created_at}
-  <input id="like" type="image" src="../images/like.jpg">
+  <input id="like" data-like='0' type="image" src="../images/like.jpg">
   </footer>
   </article>`
 }
@@ -67,16 +67,20 @@ $(function() {
   const $tweetForm = $('#form-01');
   const $tweetText = $('#new-text');
   // Like button functionality
-  let likeStatus = 0;
+  // let likeStatus = 0;
+
+
   $(document).on('click','#like', function(){
-    if (likeStatus === 0) {
-      alert('Liked!');
+    let liked = document.getElementById('like');
+    if (liked.getAttribute('data-like') === '0') {
       $(this).css('opacity','0.7');
-      likeStatus = 1;
+      liked.setAttribute('data-like','1');
+      // likeStatus = 1;
     } 
     else {
       $(this).removeAttr('style');
-      likeStatus = 0;
+      liked.setAttribute('data-like','0');
+      // likeStatus = 0;
     }
   });
   // New tweet submission and appending functionality
