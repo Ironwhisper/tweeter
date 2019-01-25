@@ -39,6 +39,6 @@ Also a big thanks to all the mentors who patiently helped me get through the mud
 
 Here are some screens from actual app!
 
-!["Write down your message!"](https://raw.githubusercontent.com/Ironwhisper/tweeter/master/Screenshots/Compose.png)
-!["See what others wrote!"](https://raw.githubusercontent.com/Ironwhisper/tweeter/master/Screenshots/Tweets.png)
-!["Like what you like!"](https://raw.githubusercontent.com/Ironwhisper/tweeter/master/Screenshots/Like.png)
+!["Write down your message!"](https://raw.githubusercontent.com/Ironwhisper/tweeter/master/Screenshots/Compose.png "Write down your message!")
+!["See what others wrote!"](https://raw.githubusercontent.com/Ironwhisper/tweeter/master/Screenshots/Tweets.png "See what others wrote!")
+!["Like what you like!"](https://raw.githubusercontent.com/Ironwhisper/tweeter/master/Screenshots/Like.png "Like what you like!")
