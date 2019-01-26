@@ -2,7 +2,7 @@
   z-index: 1;
   position: fixed;
   top: 0;
-  height: 80px;
+  height: 17%;
   width: 100%;
   background-color: #00a087;
   color:  #e8fdff;
@@ -37,8 +37,12 @@
   margin-top: 1.5%;
   top: 0px;
   bottom: 0px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
 }
 
 #nav-bar .compose:hover {
-  background-color: aquamarine;
+  background-color: rgb(155, 236, 209);
+  border: 1px solid gray;
+  border-radius: 6px;
 }

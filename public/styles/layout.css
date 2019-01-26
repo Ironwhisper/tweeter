@@ -13,18 +13,20 @@ body {
   background-color: #eee;
 }
 
-.main {
-  margin-top: 30px;
-}
-
 .container {
-  margin-top: 88px;
-  width: 450px;
+  margin-top: 10%;
+  width: 66%;
   align-self: center;
   background-color: white;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
+  padding: 0.5em;
+}
+
+.sub-container {
+  border-radius: 5px;
+  background: white;
+  margin: 2em;
 }
 
 .tweet-article {
@@ -48,11 +50,11 @@ body {
 
 .tweet-article .logo {
   opacity: 0.5;
-  margin-top:2%;
+  margin-top:0.3em;
   margin-bottom: auto;
-  margin-left: 2%;
+  margin-left: 0.3em;
   float: left;
-  width:10%;
+  width: 8%;
   height: auto;
 }
 
